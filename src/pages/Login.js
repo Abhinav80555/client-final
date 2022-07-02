@@ -52,6 +52,10 @@ export function Login() {
             <button className="btn1 mt-2 mb-3">Login</button>
             <br />
             <Link to="/register">Click here to Register</Link>
+            <div style={{ color: "orangered" }}>
+              <p>user name : test</p>
+              <p>password : 12345</p>
+            </div>
           </Form>
         </Col>
       </Row>
