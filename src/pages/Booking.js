@@ -6,7 +6,7 @@ import { getAllProducts } from "../redux/action/RentalAction";
 import { bookProduct } from "../redux/action/bookingAction";
 import Spinner from "../components/Spinner";
 import { useParams } from "react-router-dom";
-// import StripeCheckout from "react-stripe-checkout";
+import StripeCheckout from "react-stripe-checkout";
 import moment from "moment";
 
 const { RangePicker } = DatePicker;
@@ -108,7 +108,7 @@ export function Booking({ match }) {
                 </p>
                 <h3>Total Amount= {totalAmount}</h3>
 
-                {/* <StripeCheckout
+                <StripeCheckout
                   shippingAddress
                   token={onToken}
                   currency="INR"
@@ -116,7 +116,7 @@ export function Booking({ match }) {
                   stripeKey="pk_test_51IYnC0SIR2AbPxU0TMStZwFUoaDZle9yXVygpVIzg36LdpO8aSG8B9j2C0AikiQw2YyCI8n4faFYQI5uG3Nk5EGQ00lCfjXYvZ"
                 >
                   <button className="btn1">Book Now</button>
-                </StripeCheckout> */}
+                </StripeCheckout>
               </div>
             )}
           </div>

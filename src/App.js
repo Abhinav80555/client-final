@@ -3,7 +3,7 @@ import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
-// import { Booking } from "./pages/Booking";
+import { Booking } from "./pages/Booking";
 import { AddProduct } from "./pages/AddProduct";
 import { EditProduct } from "./pages/EditProduct";
 import { UserBookings } from "./pages/UserBookings";
@@ -19,7 +19,7 @@ export default function App() {
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Home />} />
           <Route path="/userbookings" element={<UserBookings />} />
-          {/* <Route path="/booking/:productId" element={<Booking />} /> */}
+          <Route path="/booking/:productId" element={<Booking />} />
           <Route path="/addProduct" element={<AddProduct />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/about" element={<About />} />
