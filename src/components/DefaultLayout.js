@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 
 export function DefaultLayout(props) {
   const user = JSON.parse(localStorage.getItem("user"));
+  let admin = false;
+  const cred = JSON.parse(localStorage.getItem("user"));
+  if (cred.username === "admin") {
+    admin = true;
+  } else {
+    admin = false;
+  }
+
   const menu = (
     <Menu
       items={[
@@ -17,7 +25,7 @@ export function DefaultLayout(props) {
         },
         {
           key: "3",
-          label: <Link to="/admin">Admin</Link>
+          label: admin && <Link to="/admin">Admin</Link>
         },
         {
           key: "4",
