@@ -6,7 +6,7 @@ export function DefaultLayout(props) {
   const user = JSON.parse(localStorage.getItem("user"));
   let admin = false;
   const cred = JSON.parse(localStorage.getItem("user"));
-  if (cred.username === "admin") {
+  if (cred.username === "admin@gmail.com") {
     admin = true;
   } else {
     admin = false;
